@@ -30,7 +30,7 @@
     IBOutlet NSWindow *ToProResWindow;
     IBOutlet NSButton *CancelButton;
     IBOutlet NSTextField *MessageTextFieldName;
-    IBOutlet NSTextField *MessageTextFieldCodec;
+    IBOutlet NSTextField *MessageTextFieldFPS;
     IBOutlet NSTextField *MessageTextFieldCount;
     IBOutlet NSTextField *MessageTextFieldProgress;
     IBOutlet NSTextField *MessageTextFieldSize;
@@ -661,12 +661,12 @@
         }
         
         
-        if ([theLine hasPrefix:@"Codec:"]) {
-            NSString *CodecString = [theLine substringFromIndex:6];
-            if ([CodecString hasSuffix:@"%"]) {
-                CodecString = [CodecString substringToIndex:[CodecString length]-1];
+        if ([theLine hasPrefix:@"FPS:"]) {
+            NSString *FPSString = [theLine substringFromIndex:4];
+            if ([FPSString hasSuffix:@"%"]) {
+                FPSString = [FPSString substringToIndex:[FPSString length]-1];
             }
-            [MessageTextFieldCodec setStringValue:CodecString];
+            [MessageTextFieldFPS setStringValue:FPSString];
             continue;
         }
         

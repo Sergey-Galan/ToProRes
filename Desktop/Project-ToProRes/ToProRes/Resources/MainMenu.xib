@@ -22,7 +22,7 @@
                 <outlet property="CancelButton" destination="xTJ-ab-Yle" id="6NL-s1-e88"/>
                 <outlet property="FolderPicker2" destination="E82-YX-Hfo" id="1O4-4E-pyh"/>
                 <outlet property="FoldernameLabel2" destination="NOh-2l-de5" id="0nd-KV-DTj"/>
-                <outlet property="MessageTextFieldCodec" destination="Vli-t6-05P" id="KU6-Kt-A6V"/>
+                <outlet property="MessageTextFieldFPS" destination="Vli-t6-05P" id="KU6-Kt-A6V"/>
                 <outlet property="MessageTextFieldCount" destination="Mbs-ef-aeU" id="nBO-SV-VZy"/>
                 <outlet property="MessageTextFieldDuration" destination="gvA-6q-NqS" id="qpK-CR-9kh"/>
                 <outlet property="MessageTextFieldInfo" destination="BbA-Cc-feO" id="mc1-4J-ovG"/>
@@ -65,7 +65,7 @@
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="Vli-t6-05P" userLabel="Codec">
+                                <textField verticalHuggingPriority="750" id="Vli-t6-05P" userLabel="FPS">
                                     <rect key="frame" x="120" y="174" width="154" height="10"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="YIP-xs-7Wv">
