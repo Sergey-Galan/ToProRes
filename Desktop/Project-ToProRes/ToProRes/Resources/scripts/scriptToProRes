@@ -38,13 +38,13 @@ TranscodingProRes()
 
 if  [[ "$(./tools/ffmpeg -i "$file" -hide_banner 2>&1 | grep -e 'Guessed Channel Layout for Input Stream #0.1 : mono')" ]]; then
     echo "Guessed Channel Layout for Input Stream #0.1"
-    ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -map 0:0 -c:v prores_ks -f mov ${pr} -qscale:v 9 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le -filter_complex "[0:1][0:2]amerge=inputs="2"[aout]" -map "[aout]" "$DestinationFolder/$file_end.part"
+    ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -map 0:0 -c:v prores_ks -f mov ${pr} -qscale:v 5 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le -filter_complex "[0:1][0:2]amerge=inputs="2"[aout]" -map "[aout]" "$DestinationFolder/$file_end.part"
 elif [[ "$(./tools/ffmpeg -i "$file" -hide_banner 2>&1 | grep -e 'Guessed Channel Layout for Input Stream #0.2 : mono')" ]]; then
     echo "Guessed Channel Layout for Input Stream #0.2"
-    ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -map 0:0 -c:v prores_ks -f mov ${pr} -qscale:v 9 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le -filter_complex "[0:2][0:3]amerge=inputs="2"[aout]" -map "[aout]" "$DestinationFolder/$file_end.part"
+    ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -map 0:0 -c:v prores_ks -f mov ${pr} -qscale:v 5 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le -filter_complex "[0:2][0:3]amerge=inputs="2"[aout]" -map "[aout]" "$DestinationFolder/$file_end.part"
     else
     echo "audio map... OK"
-  ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -c:v prores_ks -f mov ${pr} -qscale:v 9 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le "$DestinationFolder/$file_end.part"
+  ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -c:v prores_ks -f mov ${pr} -qscale:v 5 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le "$DestinationFolder/$file_end.part"
 fi
 
 }
