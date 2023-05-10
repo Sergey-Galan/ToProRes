@@ -229,7 +229,7 @@
         [self pathForDatafolderDefault1];
     }
     
-    //Получить ключи из плиста
+    //Get the keys from the plist
     NSData *plistData = [NSData dataWithContentsOfFile:self.plistFileName];
     if (!plistData)
     {
@@ -269,7 +269,7 @@
 }
 
 
-//Сохранить плист, добавив ключ
+//Save the plist by adding a key
 - (IBAction)savePlist:(id)sender
 {
     [ProgressIndicator setHidden:NO];
