@@ -895,10 +895,6 @@
     return YES;
 }
 
-/*********************************************
- Returns whether a given file matches the file
- suffixes/UTIs specified in AppSettings.plist
- *********************************************/
 
 - (BOOL)isAcceptableFileType:(NSString *)file {
     
