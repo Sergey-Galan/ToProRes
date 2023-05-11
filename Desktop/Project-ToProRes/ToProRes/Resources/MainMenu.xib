@@ -22,9 +22,9 @@
                 <outlet property="CancelButton" destination="xTJ-ab-Yle" id="6NL-s1-e88"/>
                 <outlet property="FolderPicker2" destination="E82-YX-Hfo" id="1O4-4E-pyh"/>
                 <outlet property="FoldernameLabel2" destination="NOh-2l-de5" id="0nd-KV-DTj"/>
-                <outlet property="MessageTextFieldFPS" destination="Vli-t6-05P" id="KU6-Kt-A6V"/>
                 <outlet property="MessageTextFieldCount" destination="Mbs-ef-aeU" id="nBO-SV-VZy"/>
                 <outlet property="MessageTextFieldDuration" destination="gvA-6q-NqS" id="qpK-CR-9kh"/>
+                <outlet property="MessageTextFieldFPS" destination="Vli-t6-05P" id="KU6-Kt-A6V"/>
                 <outlet property="MessageTextFieldInfo" destination="BbA-Cc-feO" id="mc1-4J-ovG"/>
                 <outlet property="MessageTextFieldName" destination="q8Q-c5-4rL" id="kbB-z2-zCM"/>
                 <outlet property="MessageTextFieldSize" destination="b8y-Hs-Yha" id="ZYA-lp-aMi"/>
@@ -38,7 +38,7 @@
                 <outlet property="windowMenu" destination="24" id="328"/>
             </connections>
         </customObject>
-        <window title="ToProRes" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="ToProResWindow" animationBehavior="default" titlebarAppearsTransparent="YES" id="Vll-7R-0Ba" userLabel="ToProResWindow">
+        <window title="ToProRes" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="ToProResWindow" animationBehavior="default" id="Vll-7R-0Ba" userLabel="ToProResWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
             <rect key="contentRect" x="860" y="690" width="438" height="305"/>
