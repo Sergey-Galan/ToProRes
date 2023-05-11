@@ -148,7 +148,7 @@
 
 #pragma mark - App Settings
 
-// Load configuration from AppSettings.plist and Info.plist, sanitize values, etc.
+// Load configuration from AppSettings.plist, sanitize values, etc.
 - (void)loadAppSettings {
     // Application bundle
     NSBundle *bundle = [NSBundle mainBundle];
