@@ -1,0 +1,278 @@
+#!/bin/sh
+
+Transcoding()
+{
+  duration2="$(./tools/ffmpeg -i "$file" 2>&1 | grep Duration | cut -d ' ' -f4 | sed s/,// | cut -d '.' -f1)"
+  h="$(./tools/ffmpeg -i "$file" 2>&1 | grep Duration | cut -d ' ' -f4 | sed s/,// | cut -c1,2)"
+  m="$(./tools/ffmpeg -i "$file" 2>&1 | grep Duration | cut -d ' ' -f4 | sed s/,// | cut -c4,5)"
+  s="$(./tools/ffmpeg -i "$file" 2>&1 | grep Duration | cut -d ' ' -f4 | sed s/,// | cut -c7,8)"
+  ms="$(./tools/ffmpeg -i "$file" 2>&1 | grep Duration | cut -d ' ' -f4 | sed s/,// | cut -c10,11)"
+
+Profile="$(defaults read $ToProResPlist Profile)"
+
+   if [[ "$Profile" = "422 Proxy" ]]; then
+   pr="-profile:v 0 -pix_fmt yuv422p10le"
+   elif [[ "$Profile" = "422 LT" ]]; then
+   pr="-profile:v 1 -pix_fmt yuv422p10le"
+   elif [[ "$Profile" = "422" ]]; then
+   pr="-profile:v 2 -pix_fmt yuv422p10le"
+   elif [[ "$Profile" = "422 HQ" ]]; then
+   pr="-profile:v 3 -pix_fmt yuv422p10le"
+   elif [[ "$Profile" = "4444" ]]; then
+   pr="-profile:v 4 -pix_fmt yuva444p10le"
+   elif [[ "$Profile" = "4444 XQ" ]]; then
+   pr="-profile:v 5 -pix_fmt yuva444p10le"
+   fi
+echo "Info:Start encoding file to ProRes $Profile"
+echo "Count:$count"
+  TranscodingProRes 2>&1 |
+  OutputFFmpeg
+  
+echo "Info:Encoding... done"
+
+}
+
+
+TranscodingProRes()
+{
+
+if  [[ "$(./tools/ffmpeg -i "$file" -hide_banner 2>&1 | grep -e 'Guessed Channel Layout for Input Stream #0.1 : mono')" ]]; then
+    echo "Guessed Channel Layout for Input Stream #0.1"
+    ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -map 0:0 -c:v prores_ks -f mov ${pr} -qscale:v 5 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le -filter_complex "[0:1][0:2]amerge=inputs="2"[aout]" -map "[aout]" "$DestinationFolder/$file_end.part"
+elif [[ "$(./tools/ffmpeg -i "$file" -hide_banner 2>&1 | grep -e 'Guessed Channel Layout for Input Stream #0.2 : mono')" ]]; then
+    echo "Guessed Channel Layout for Input Stream #0.2"
+    ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -map 0:0 -c:v prores_ks -f mov ${pr} -qscale:v 5 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le -filter_complex "[0:2][0:3]amerge=inputs="2"[aout]" -map "[aout]" "$DestinationFolder/$file_end.part"
+    else
+    echo "audio map... OK"
+  ./tools/ffmpeg -v error -hide_banner -stats -i "$file" -c:v prores_ks -f mov ${pr} -qscale:v 5 -vendor apl0 -bits_per_mb 8000 -c:a pcm_s16le "$DestinationFolder/$file_end.part"
+fi
+
+}
+
+
+OutputFFmpeg()
+{
+echo "ONLY:RED"
+echo "Progress:0" &
+echo "Files:file://"$file""
+echo "Seconds:0"
+while IFS= read -d $'\r' -r p; do
+  echo "$p"
+  fps=${p/' q='*/}
+  fps=${fps/*'fps= '/}
+  fps=${fps/*'fps='/}
+  size="$(./tools/mediainfo --Inform="General;%FileSize/String%" "$DestinationFolder/$file_end.part")"
+  size=${size/' '/}
+  size=${size/' '/}
+  size=${size/'i'*/}
+  speed=${p/*speed=/}
+  speed=${speed%'x'*}
+  speed=${speed/* /}
+  speed=${speed:(0):(4)}
+  tm=${p/*time=/}
+  tm=${tm/ *}
+  mss=${tm/*./}
+  mss=${mss/' '*/}
+  tm=${tm/.*}
+  hh=${tm/:*/}
+  ss=${tm/*:/}
+  mm=${tm%':'*}
+  mm=${mm/*:/}
+
+prtth=$(expr $hh \* 3600 2>/dev/null);
+prttm=$(expr $mm \* 60 2>/dev/null);
+prtt=$(expr $prtth + $prttm + $ss 2>/dev/null)
+
+prth=$(expr $h \* 3600 2>/dev/null);
+prtm=$(expr $m \* 60 2>/dev/null);
+prt=$(expr $prth + $prtm + $s 2>/dev/null)
+
+pr=$(expr "$prtt""$mss"00 / "$prt""$ms" 2>/dev/null)
+
+tl=$(expr "$prt" - "$prtt" 2>/dev/null);
+#tl=`echo "$tl" "$speed" | awk '{print $1/$2}'`;
+#tl=${tl/.*/}
+tl=$(echo 'scale = 0 ; '$tl' / '$speed'' | bc 2>/dev/null);
+    ((tlh=${tl}/3600)) 2>/dev/null
+    ((tlm=(${tl}%3600)/60)) 2>/dev/null
+    ((tls=${tl}%60)) 2>/dev/null
+tl=$(printf "%02d:%02d:%02d\n" $tlh $tlm $tls)
+echo "Seconds:$prtt"
+
+if [[ -n "$pr" ]] && [[ "$pr" -ge 0 ]]; then
+
+echo "Progress:""$pr""% "
+echo "FPS:""FPS: $fps"
+echo "Size:""Size: $size"
+echo "Time:""Time: $tl"
+echo "Speed:""Speed: $speed""x"
+echo "Duration:""Duration: $tm of $duration2"
+
+fi
+echo "Name:$file_end.mov"
+done
+
+size="$(./tools/mediainfo --Inform="General;%FileSize/String%" "$DestinationFolder/$file_end.part")"
+size=${size/' '/}
+size=${size/' '/}
+size=${size/'i'*/}
+
+echo "Seconds:$prt"
+echo "Progress:100"
+echo "FPS:""FPS: $fps"
+echo "Size:""Size: $size"
+echo "Time:""Time: $tl"
+echo "Speed:""Speed: $speed""x"
+echo "Duration:""Duration: $duration2 of $duration2"
+
+}
+
+
+Time()
+{
+finishTime=$(date -u "+%s")
+processedTime=$(expr $finishTime - $startTime)
+
+if [[ $processedTime -gt 3599 ]]; then
+    processedTime=$(printf "%dh%dm%ds\n" $((processedTime/3600%3600)) $((processedTime/60%60)) $((processedTime%60)))
+
+elif [[ $processedTime -gt 59 ]]; then
+    processedTime=$(printf "%dm%ds\n" $((processedTime/60%60)) $((processedTime%60)))
+ else
+    processedTime=$(printf "%ds\n" $((processedTime)))
+fi
+
+}
+
+
+Notification()
+{
+size="$(./tools/mediainfo --Inform="General;%FileSize/String%" "$DestinationFolder/$file_end.mov")"
+size=${size/' '/}
+size=${size/' '/}
+size=${size/'i'*/}
+echo "NOTIFICATION:"$file_end.mov Complete" \r"$cod Duration... $duration2 Size... $size""
+
+}
+
+
+
+##################################################################################
+###### Start script execution routine ############################################
+##################################################################################
+
+ToProResPlist="$HOME/Library/Preferences/org.SerhiiHalan.SettingsToProRes.plist" &> /dev/null
+DestinationFolder="$(/usr/libexec/PlistBuddy -c "Print :DestinationFolder" "$ToProResPlist")"
+mkdir "$DestinationFolder" &> /dev/null
+    
+for part in "$DestinationFolder"/*.part;
+  do
+  rm -f "$part"
+done
+
+if [[ -f "$1" ]]; then
+
+startTime=$(date -u "+%s")
+
+for file in "$@"; do
+
+ext="${file##*.}"
+if [[ `echo "mov qt mp4 mpg4 mpg mpeg mpe m75 m15 mts mkv mxf 3gp m4v avi wm wmv vfw ts flv webm vob asf asx bin dat dav drv f4v gtp mod moov rm rmvd spl vcd vid 3g2 3gp 3gp2 3gpp 3gpp2 dif swf dv m2v m2p m2t mpegts yuv bsf evo exp hdmov hdv mpv mqv" 2>&1 | grep -i $ext` ]]; then
+
+    echo "Name:"
+    echo "Seconds:"
+    echo "Info:"
+    echo "Progress:0"
+    echo "FPS:"
+    echo "Size:"
+    echo "Time:"
+    echo "Speed:"
+    echo "Duration:"
+    echo "Media:"
+    echo "Count:"
+
+    tempfile="${file##*/}"
+    file_end="${tempfile%.*}"
+    count=$(( $count + 1 ))
+    Transcoding
+    mv "$DestinationFolder/$file_end.part" "$DestinationFolder/$file_end.mov"
+    afplay sound/done.mp3 &> /dev/null &
+    Notification
+    echo "Progress:100"
+else
+    echo "Progress:"
+    echo "Name:"
+    echo "Seconds:"
+    echo "Info:"
+    echo "FPS:"
+    echo "Size:"
+    echo "Time:"
+    echo "Speed:"
+    echo "Duration:"
+    echo "Media:"
+    echo "Count:"
+fi
+done
+
+elif [[ -d "$@" ]]; then
+  for folder in "$@"; do
+    tempfolder="${folder##*/}"
+    folder_end="${tempfolder%.*}"
+  done
+  
+  mkdir "$DestinationFolder/$folder_end-ProRes/" &> /dev/null
+  for part in "$DestinationFolder/$folder_end-ProRes"/*.part;
+    do
+     rm -f "$part"
+  done
+
+DestinationFolder=$DestinationFolder/$folder_end-ProRes
+
+startTime=$(date -u "+%s")
+
+for file in "$folder"/*.*; do
+ext="${file##*.}"
+
+if [[ `echo "mov qt mp4 mpg4 mpg mpeg mpe m75 m15 mts mkv mxf 3gp m4v avi wm wmv vfw ts flv webm vob asf asx bin dat dav drv f4v gtp mod moov rm rmvd spl vcd vid 3g2 3gp 3gp2 3gpp 3gpp2 dif swf dv m2v m2p m2t mpegts yuv bsf evo exp hdmov hdv mpv mqv" 2>&1 | grep -i $ext` ]]; then
+
+    echo "Name:"
+    echo "Seconds:"
+    echo "Info:"
+    echo "Progress:0"
+    echo "FPS:"
+    echo "Size:"
+    echo "Time:"
+    echo "Speed:"
+    echo "Duration:"
+    echo "Media:"
+    echo "Count:"
+    
+    tempfile="${file##*/}"
+    file_end="${tempfile%.*}"
+
+    count=$(( $count + 1 ))
+
+    Transcoding
+    mv "$DestinationFolder/$file_end.part" "$DestinationFolder/$file_end.mov"
+    afplay sound/done.mp3 &> /dev/null &
+    Notification
+    echo "Progress:100"
+else
+    echo "Progress:"
+    echo "Name:"
+    echo "Seconds:"
+    echo "Info:"
+    echo "FPS:"
+    echo "Size:"
+    echo "Time:"
+    echo "Speed:"
+    echo "Duration:"
+    echo "Media:"
+    echo "Count:"
+fi
+done
+fi
+Time
+echo "Info:Total processed: $processedTime Time: $(date "+%Y-%m-%d %H:%M:%S %z")"
+exit
+
