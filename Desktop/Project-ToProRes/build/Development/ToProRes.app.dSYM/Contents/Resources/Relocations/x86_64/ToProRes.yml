@@ -1,103 +1,104 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/Volumes/Content/Project-Xcode/Project-ToProRes/Desktop/Project-ToProRes/build/Development/ToProRes.app/Contents/MacOS/ToProRes'
+binary-path:     '/Volumes/Content/Project-Xcode/ToProRes/Desktop/Project-ToProRes/build/Development/ToProRes.app/Contents/MacOS/ToProRes'
 relocations:
-  - { offsetInCU: 0x27, offset: 0xC7ADD, size: 0x8, addend: 0x0, symName: '-[ToProResJob initWithArguments:andStandardInput:]', symObjAddr: 0x0, symBinAddr: 0x100003990, symSize: 0xF0 }
-  - { offsetInCU: 0x8E, offset: 0xC7B44, size: 0x8, addend: 0x0, symName: '-[ToProResJob initWithArguments:andStandardInput:]', symObjAddr: 0x0, symBinAddr: 0x100003990, symSize: 0xF0 }
-  - { offsetInCU: 0xE5, offset: 0xC7B9B, size: 0x8, addend: 0x0, symName: '+[ToProResJob jobWithArguments:andStandardInput:]', symObjAddr: 0xF0, symBinAddr: 0x100003A80, symSize: 0xB0 }
-  - { offsetInCU: 0x13C, offset: 0xC7BF2, size: 0x8, addend: 0x0, symName: '-[ToProResJob arguments]', symObjAddr: 0x1A0, symBinAddr: 0x100003B30, symSize: 0x20 }
-  - { offsetInCU: 0x175, offset: 0xC7C2B, size: 0x8, addend: 0x0, symName: '-[ToProResJob setArguments:]', symObjAddr: 0x1C0, symBinAddr: 0x100003B50, symSize: 0x30 }
-  - { offsetInCU: 0x1B7, offset: 0xC7C6D, size: 0x8, addend: 0x0, symName: '-[ToProResJob standardInputString]', symObjAddr: 0x1F0, symBinAddr: 0x100003B80, symSize: 0x20 }
-  - { offsetInCU: 0x1F0, offset: 0xC7CA6, size: 0x8, addend: 0x0, symName: '-[ToProResJob setStandardInputString:]', symObjAddr: 0x210, symBinAddr: 0x100003BA0, symSize: 0x30 }
-  - { offsetInCU: 0x232, offset: 0xC7CE8, size: 0x8, addend: 0x0, symName: '-[ToProResJob .cxx_destruct]', symObjAddr: 0x240, symBinAddr: 0x100003BD0, symSize: 0x3C }
-  - { offsetInCU: 0x91, offset: 0xC7DE3, size: 0x8, addend: 0x0, symName: '+[DockCircularProgressBar sharedDockCircularProgressBar]', symObjAddr: 0x1B30, symBinAddr: 0x100005740, symSize: 0x1B0 }
-  - { offsetInCU: 0xBB, offset: 0xC7E0D, size: 0x8, addend: 0x0, symName: '__ZZ56+[DockCircularProgressBar sharedDockCircularProgressBar]E12progress_bar', symObjAddr: 0xFB90, symBinAddr: 0x100013628, symSize: 0x0 }
-  - { offsetInCU: 0x3A66, offset: 0xCB7B8, size: 0x8, addend: 0x0, symName: '-[DockTileView drawRect:]', symObjAddr: 0x0, symBinAddr: 0x100003C10, symSize: 0x1990 }
-  - { offsetInCU: 0x3DD2, offset: 0xCBB24, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateC1Ev, symObjAddr: 0x1990, symBinAddr: 0x1000055A0, symSize: 0x20 }
-  - { offsetInCU: 0x3DFC, offset: 0xCBB4E, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateD1Ev, symObjAddr: 0x19B0, symBinAddr: 0x1000055C0, symSize: 0x20 }
-  - { offsetInCU: 0x3E26, offset: 0xCBB78, size: 0x8, addend: 0x0, symName: '-[DockTileView indeterminate]', symObjAddr: 0x19E0, symBinAddr: 0x1000055F0, symSize: 0x20 }
-  - { offsetInCU: 0x3E5F, offset: 0xCBBB1, size: 0x8, addend: 0x0, symName: '-[DockTileView setIndeterminate:]', symObjAddr: 0x1A00, symBinAddr: 0x100005610, symSize: 0x30 }
-  - { offsetInCU: 0x3EA1, offset: 0xCBBF3, size: 0x8, addend: 0x0, symName: '-[DockTileView progress]', symObjAddr: 0x1A30, symBinAddr: 0x100005640, symSize: 0x30 }
-  - { offsetInCU: 0x3EDA, offset: 0xCBC2C, size: 0x8, addend: 0x0, symName: '-[DockTileView setProgress:]', symObjAddr: 0x1A60, symBinAddr: 0x100005670, symSize: 0x30 }
-  - { offsetInCU: 0x3F1C, offset: 0xCBC6E, size: 0x8, addend: 0x0, symName: '-[DockTileView hideProgressBar]', symObjAddr: 0x1A90, symBinAddr: 0x1000056A0, symSize: 0x20 }
-  - { offsetInCU: 0x3F55, offset: 0xCBCA7, size: 0x8, addend: 0x0, symName: '-[DockTileView setHideProgressBar:]', symObjAddr: 0x1AB0, symBinAddr: 0x1000056C0, symSize: 0x30 }
-  - { offsetInCU: 0x3F97, offset: 0xCBCE9, size: 0x8, addend: 0x0, symName: '-[DockTileView showPercent]', symObjAddr: 0x1AE0, symBinAddr: 0x1000056F0, symSize: 0x20 }
-  - { offsetInCU: 0x3FD0, offset: 0xCBD22, size: 0x8, addend: 0x0, symName: '-[DockTileView setShowPercent:]', symObjAddr: 0x1B00, symBinAddr: 0x100005710, symSize: 0x30 }
-  - { offsetInCU: 0x4012, offset: 0xCBD64, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar updateProgressBar]', symObjAddr: 0x1CE0, symBinAddr: 0x1000058F0, symSize: 0x1A0 }
-  - { offsetInCU: 0x4065, offset: 0xCBDB7, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar hideProgressBar]', symObjAddr: 0x1E80, symBinAddr: 0x100005A90, symSize: 0x1A0 }
-  - { offsetInCU: 0x40B8, offset: 0xCBE0A, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar setIndeterminate:]', symObjAddr: 0x2020, symBinAddr: 0x100005C30, symSize: 0x180 }
-  - { offsetInCU: 0x411A, offset: 0xCBE6C, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar setProgress:]', symObjAddr: 0x21A0, symBinAddr: 0x100005DB0, symSize: 0x140 }
-  - { offsetInCU: 0x417C, offset: 0xCBECE, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar clear]', symObjAddr: 0x22E0, symBinAddr: 0x100005EF0, symSize: 0x90 }
-  - { offsetInCU: 0x41B1, offset: 0xCBF03, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateC2Ev, symObjAddr: 0x2370, symBinAddr: 0x100005F80, symSize: 0x30 }
-  - { offsetInCU: 0x41DB, offset: 0xCBF2D, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateD2Ev, symObjAddr: 0x23A0, symBinAddr: 0x100005FB0, symSize: 0x26 }
-  - { offsetInCU: 0x27, offset: 0xCC4A9, size: 0x8, addend: 0x0, symName: '-[ProgressBarView viewDidMoveToWindow]', symObjAddr: 0x0, symBinAddr: 0x100005FE0, symSize: 0x20 }
-  - { offsetInCU: 0x89, offset: 0xCC50B, size: 0x8, addend: 0x0, symName: '-[ProgressBarView viewDidMoveToWindow]', symObjAddr: 0x0, symBinAddr: 0x100005FE0, symSize: 0x20 }
-  - { offsetInCU: 0x141, offset: 0xCC5C3, size: 0x8, addend: 0x0, symName: '-[ProgressBarView drawRect:]', symObjAddr: 0x20, symBinAddr: 0x100006000, symSize: 0x970 }
-  - { offsetInCU: 0x30D, offset: 0xCC78F, size: 0x8, addend: 0x0, symName: '-[ProgressBarView isFlipped]', symObjAddr: 0x990, symBinAddr: 0x100006970, symSize: 0x20 }
-  - { offsetInCU: 0x346, offset: 0xCC7C8, size: 0x8, addend: 0x0, symName: '-[ProgressBarView .cxx_destruct]', symObjAddr: 0x9B0, symBinAddr: 0x100006990, symSize: 0x42 }
-  - { offsetInCU: 0x27, offset: 0xCC857, size: 0x8, addend: 0x0, symName: '-[Controller init]', symObjAddr: 0x0, symBinAddr: 0x1000069E0, symSize: 0x100 }
-  - { offsetInCU: 0x4EA, offset: 0xCCD1A, size: 0x8, addend: 0x0, symName: '-[Controller init]', symObjAddr: 0x0, symBinAddr: 0x1000069E0, symSize: 0x100 }
-  - { offsetInCU: 0x523, offset: 0xCCD53, size: 0x8, addend: 0x0, symName: '-[Controller awakeFromNib]', symObjAddr: 0x100, symBinAddr: 0x100006AE0, symSize: 0x1A0 }
-  - { offsetInCU: 0x585, offset: 0xCCDB5, size: 0x8, addend: 0x0, symName: '-[Controller loadAppSettings]', symObjAddr: 0x2A0, symBinAddr: 0x100006C80, symSize: 0x350 }
-  - { offsetInCU: 0x5E7, offset: 0xCCE17, size: 0x8, addend: 0x0, symName: '-[Controller pathForDatafolderDefault1]', symObjAddr: 0x5F0, symBinAddr: 0x100006FD0, symSize: 0x190 }
-  - { offsetInCU: 0x64D, offset: 0xCCE7D, size: 0x8, addend: 0x0, symName: '-[Controller pathForDatafolder2]', symObjAddr: 0x780, symBinAddr: 0x100007160, symSize: 0x120 }
-  - { offsetInCU: 0x6B3, offset: 0xCCEE3, size: 0x8, addend: 0x0, symName: '-[Controller applicationDidFinishLaunching:]', symObjAddr: 0x8A0, symBinAddr: 0x100007280, symSize: 0xA10 }
-  - { offsetInCU: 0x7C0, offset: 0xCCFF0, size: 0x8, addend: 0x0, symName: '-[Controller savePlist:]', symObjAddr: 0x12B0, symBinAddr: 0x100007C90, symSize: 0x440 }
-  - { offsetInCU: 0x899, offset: 0xCD0C9, size: 0x8, addend: 0x0, symName: '___24-[Controller savePlist:]_block_invoke', symObjAddr: 0x16F0, symBinAddr: 0x1000080D0, symSize: 0xF0 }
-  - { offsetInCU: 0x911, offset: 0xCD141, size: 0x8, addend: 0x0, symName: '___24-[Controller savePlist:]_block_invoke_2', symObjAddr: 0x17E0, symBinAddr: 0x1000081C0, symSize: 0x60 }
-  - { offsetInCU: 0x954, offset: 0xCD184, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0x1840, symBinAddr: 0x100008220, symSize: 0x40 }
-  - { offsetInCU: 0x97B, offset: 0xCD1AB, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0x1880, symBinAddr: 0x100008260, symSize: 0x30 }
-  - { offsetInCU: 0x999, offset: 0xCD1C9, size: 0x8, addend: 0x0, symName: '-[Controller FolderPicker2:]', symObjAddr: 0x18B0, symBinAddr: 0x100008290, symSize: 0x450 }
-  - { offsetInCU: 0xA80, offset: 0xCD2B0, size: 0x8, addend: 0x0, symName: '-[Controller userNotificationCenter:shouldPresentNotification:]', symObjAddr: 0x1D00, symBinAddr: 0x1000086E0, symSize: 0x80 }
-  - { offsetInCU: 0xADA, offset: 0xCD30A, size: 0x8, addend: 0x0, symName: '-[Controller application:openFiles:]', symObjAddr: 0x1D80, symBinAddr: 0x100008760, symSize: 0x3B0 }
-  - { offsetInCU: 0xB65, offset: 0xCD395, size: 0x8, addend: 0x0, symName: '-[Controller applicationShouldTerminate:]', symObjAddr: 0x2130, symBinAddr: 0x100008B10, symSize: 0xB0 }
-  - { offsetInCU: 0xBAF, offset: 0xCD3DF, size: 0x8, addend: 0x0, symName: '-[Controller initialiseInterface]', symObjAddr: 0x21E0, symBinAddr: 0x100008BC0, symSize: 0x1C0 }
-  - { offsetInCU: 0xBE5, offset: 0xCD415, size: 0x8, addend: 0x0, symName: '-[Controller prepareInterfaceForExecution]', symObjAddr: 0x23A0, symBinAddr: 0x100008D80, symSize: 0x100 }
-  - { offsetInCU: 0xC1B, offset: 0xCD44B, size: 0x8, addend: 0x0, symName: '-[Controller cleanupInterface]', symObjAddr: 0x24A0, symBinAddr: 0x100008E80, symSize: 0x70 }
-  - { offsetInCU: 0xC51, offset: 0xCD481, size: 0x8, addend: 0x0, symName: '-[Controller prepareForExecution]', symObjAddr: 0x2510, symBinAddr: 0x100008EF0, symSize: 0x2C0 }
-  - { offsetInCU: 0xCA6, offset: 0xCD4D6, size: 0x8, addend: 0x0, symName: '-[Controller executeScript]', symObjAddr: 0x27D0, symBinAddr: 0x1000091B0, symSize: 0x80 }
-  - { offsetInCU: 0xCDC, offset: 0xCD50C, size: 0x8, addend: 0x0, symName: '-[Controller executeScriptWithoutPrivileges]', symObjAddr: 0x2850, symBinAddr: 0x100009230, symSize: 0x3A0 }
-  - { offsetInCU: 0xD12, offset: 0xCD542, size: 0x8, addend: 0x0, symName: '-[Controller taskFinished:]', symObjAddr: 0x2BF0, symBinAddr: 0x1000095D0, symSize: 0xB0 }
-  - { offsetInCU: 0xD58, offset: 0xCD588, size: 0x8, addend: 0x0, symName: '-[Controller cleanup]', symObjAddr: 0x2CA0, symBinAddr: 0x100009680, symSize: 0x150 }
-  - { offsetInCU: 0xDAD, offset: 0xCD5DD, size: 0x8, addend: 0x0, symName: '-[Controller gotOutputData:]', symObjAddr: 0x2DF0, symBinAddr: 0x1000097D0, symSize: 0x1A0 }
-  - { offsetInCU: 0xE03, offset: 0xCD633, size: 0x8, addend: 0x0, symName: '-[Controller parseOutput:]', symObjAddr: 0x2F90, symBinAddr: 0x100009970, symSize: 0x1070 }
-  - { offsetInCU: 0x1030, offset: 0xCD860, size: 0x8, addend: 0x0, symName: '-[Controller clearOutputBuffer]', symObjAddr: 0x4000, symBinAddr: 0x10000A9E0, symSize: 0xE0 }
-  - { offsetInCU: 0x10B9, offset: 0xCD8E9, size: 0x8, addend: 0x0, symName: '-[Controller openFiles:]', symObjAddr: 0x40E0, symBinAddr: 0x10000AAC0, symSize: 0x3F0 }
-  - { offsetInCU: 0x1154, offset: 0xCD984, size: 0x8, addend: 0x0, symName: '-[Controller validateMenuItem:]', symObjAddr: 0x44D0, symBinAddr: 0x10000AEB0, symSize: 0x130 }
-  - { offsetInCU: 0x11AE, offset: 0xCD9DE, size: 0x8, addend: 0x0, symName: '-[Controller cancel:]', symObjAddr: 0x4600, symBinAddr: 0x10000AFE0, symSize: 0x160 }
-  - { offsetInCU: 0x11F4, offset: 0xCDA24, size: 0x8, addend: 0x0, symName: '-[Controller dropService:userData:error:]', symObjAddr: 0x4760, symBinAddr: 0x10000B140, symSize: 0x1E0 }
-  - { offsetInCU: 0x128A, offset: 0xCDABA, size: 0x8, addend: 0x0, symName: '-[Controller addDroppedFilesJob:]', symObjAddr: 0x4940, symBinAddr: 0x10000B320, symSize: 0x530 }
-  - { offsetInCU: 0x1339, offset: 0xCDB69, size: 0x8, addend: 0x0, symName: '-[Controller addMenuItemSelectedJob:]', symObjAddr: 0x4E70, symBinAddr: 0x10000B850, symSize: 0x110 }
-  - { offsetInCU: 0x1393, offset: 0xCDBC3, size: 0x8, addend: 0x0, symName: '-[Controller isAcceptableFileType:]', symObjAddr: 0x4F80, symBinAddr: 0x10000B960, symSize: 0x100 }
-  - { offsetInCU: 0x13FD, offset: 0xCDC2D, size: 0x8, addend: 0x0, symName: '-[Controller draggingEntered:]', symObjAddr: 0x5080, symBinAddr: 0x10000BA60, symSize: 0x4E0 }
-  - { offsetInCU: 0x14AC, offset: 0xCDCDC, size: 0x8, addend: 0x0, symName: '-[Controller prepareForDragOperation:]', symObjAddr: 0x5560, symBinAddr: 0x10000BF40, symSize: 0x50 }
-  - { offsetInCU: 0x14F6, offset: 0xCDD26, size: 0x8, addend: 0x0, symName: '-[Controller performDragOperation:]', symObjAddr: 0x55B0, symBinAddr: 0x10000BF90, symSize: 0x130 }
-  - { offsetInCU: 0x1550, offset: 0xCDD80, size: 0x8, addend: 0x0, symName: '-[Controller concludeDragOperation:]', symObjAddr: 0x56E0, symBinAddr: 0x10000C0C0, symSize: 0xB0 }
-  - { offsetInCU: 0x1596, offset: 0xCDDC6, size: 0x8, addend: 0x0, symName: '-[Controller draggingUpdated:]', symObjAddr: 0x5790, symBinAddr: 0x10000C170, symSize: 0x60 }
-  - { offsetInCU: 0x15E0, offset: 0xCDE10, size: 0x8, addend: 0x0, symName: '-[Controller menuItemSelected:]', symObjAddr: 0x57F0, symBinAddr: 0x10000C1D0, symSize: 0xF0 }
-  - { offsetInCU: 0x1626, offset: 0xCDE56, size: 0x8, addend: 0x0, symName: '-[Controller showNotification:]', symObjAddr: 0x58E0, symBinAddr: 0x10000C2C0, symSize: 0xE0 }
-  - { offsetInCU: 0x167C, offset: 0xCDEAC, size: 0x8, addend: 0x0, symName: '-[Controller buttonDonations:]', symObjAddr: 0x59C0, symBinAddr: 0x10000C3A0, symSize: 0xB0 }
-  - { offsetInCU: 0x16C2, offset: 0xCDEF2, size: 0x8, addend: 0x0, symName: '-[Controller applicationShouldTerminateAfterLastWindowClosed:]', symObjAddr: 0x5A70, symBinAddr: 0x10000C450, symSize: 0x50 }
-  - { offsetInCU: 0x170C, offset: 0xCDF3C, size: 0x8, addend: 0x0, symName: '-[Controller percentField]', symObjAddr: 0x5AC0, symBinAddr: 0x10000C4A0, symSize: 0x30 }
-  - { offsetInCU: 0x1745, offset: 0xCDF75, size: 0x8, addend: 0x0, symName: '-[Controller setPercentField:]', symObjAddr: 0x5AF0, symBinAddr: 0x10000C4D0, symSize: 0x30 }
-  - { offsetInCU: 0x1787, offset: 0xCDFB7, size: 0x8, addend: 0x0, symName: '-[Controller percentSlider]', symObjAddr: 0x5B20, symBinAddr: 0x10000C500, symSize: 0x30 }
-  - { offsetInCU: 0x17C0, offset: 0xCDFF0, size: 0x8, addend: 0x0, symName: '-[Controller setPercentSlider:]', symObjAddr: 0x5B50, symBinAddr: 0x10000C530, symSize: 0x30 }
-  - { offsetInCU: 0x1802, offset: 0xCE032, size: 0x8, addend: 0x0, symName: '-[Controller testArray1]', symObjAddr: 0x5B80, symBinAddr: 0x10000C560, symSize: 0x30 }
-  - { offsetInCU: 0x183B, offset: 0xCE06B, size: 0x8, addend: 0x0, symName: '-[Controller setTestArray1:]', symObjAddr: 0x5BB0, symBinAddr: 0x10000C590, symSize: 0x30 }
-  - { offsetInCU: 0x187D, offset: 0xCE0AD, size: 0x8, addend: 0x0, symName: '-[Controller currentlySelectedPort1]', symObjAddr: 0x5BE0, symBinAddr: 0x10000C5C0, symSize: 0x20 }
-  - { offsetInCU: 0x18B6, offset: 0xCE0E6, size: 0x8, addend: 0x0, symName: '-[Controller setCurrentlySelectedPort1:]', symObjAddr: 0x5C00, symBinAddr: 0x10000C5E0, symSize: 0x30 }
-  - { offsetInCU: 0x18F8, offset: 0xCE128, size: 0x8, addend: 0x0, symName: '-[Controller plistFileName]', symObjAddr: 0x5C30, symBinAddr: 0x10000C610, symSize: 0x30 }
-  - { offsetInCU: 0x1931, offset: 0xCE161, size: 0x8, addend: 0x0, symName: '-[Controller setPlistFileName:]', symObjAddr: 0x5C60, symBinAddr: 0x10000C640, symSize: 0x30 }
-  - { offsetInCU: 0x1973, offset: 0xCE1A3, size: 0x8, addend: 0x0, symName: '-[Controller Folder2]', symObjAddr: 0x5C90, symBinAddr: 0x10000C670, symSize: 0x30 }
-  - { offsetInCU: 0x19AC, offset: 0xCE1DC, size: 0x8, addend: 0x0, symName: '-[Controller setFolder2:]', symObjAddr: 0x5CC0, symBinAddr: 0x10000C6A0, symSize: 0x30 }
-  - { offsetInCU: 0x19EE, offset: 0xCE21E, size: 0x8, addend: 0x0, symName: '-[Controller ProgressString]', symObjAddr: 0x5CF0, symBinAddr: 0x10000C6D0, symSize: 0x30 }
-  - { offsetInCU: 0x1A27, offset: 0xCE257, size: 0x8, addend: 0x0, symName: '-[Controller setProgressString:]', symObjAddr: 0x5D20, symBinAddr: 0x10000C700, symSize: 0x30 }
-  - { offsetInCU: 0x1A69, offset: 0xCE299, size: 0x8, addend: 0x0, symName: '-[Controller .cxx_destruct]', symObjAddr: 0x5D50, symBinAddr: 0x10000C730, symSize: 0x315 }
-  - { offsetInCU: 0x27, offset: 0xCE4CB, size: 0x8, addend: 0x0, symName: _exceptionHandler, symObjAddr: 0x0, symBinAddr: 0x10000CA50, symSize: 0x110 }
-  - { offsetInCU: 0x4F, offset: 0xCE4F3, size: 0x8, addend: 0x0, symName: _root_port, symObjAddr: 0x18BC, symBinAddr: 0x10001363C, symSize: 0x0 }
-  - { offsetInCU: 0x6C, offset: 0xCE510, size: 0x8, addend: 0x0, symName: _notify, symObjAddr: 0x18B0, symBinAddr: 0x100013630, symSize: 0x0 }
-  - { offsetInCU: 0x82, offset: 0xCE526, size: 0x8, addend: 0x0, symName: _anIterator, symObjAddr: 0x18B8, symBinAddr: 0x100013638, symSize: 0x0 }
-  - { offsetInCU: 0xA8, offset: 0xCE54C, size: 0x8, addend: 0x0, symName: _exceptionHandler, symObjAddr: 0x0, symBinAddr: 0x10000CA50, symSize: 0x110 }
-  - { offsetInCU: 0xCE, offset: 0xCE572, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x110, symBinAddr: 0x10000CB60, symSize: 0xE0 }
-  - { offsetInCU: 0x107, offset: 0xCE5AB, size: 0x8, addend: 0x0, symName: _callback, symObjAddr: 0x1F0, symBinAddr: 0x10000CC40, symSize: 0xBD }
+  - { offsetInCU: 0x27, offset: 0xC7ADD, size: 0x8, addend: 0x0, symName: '-[ToProResJob initWithArguments:andStandardInput:]', symObjAddr: 0x0, symBinAddr: 0x100003A70, symSize: 0xF0 }
+  - { offsetInCU: 0x8E, offset: 0xC7B44, size: 0x8, addend: 0x0, symName: '-[ToProResJob initWithArguments:andStandardInput:]', symObjAddr: 0x0, symBinAddr: 0x100003A70, symSize: 0xF0 }
+  - { offsetInCU: 0xE5, offset: 0xC7B9B, size: 0x8, addend: 0x0, symName: '+[ToProResJob jobWithArguments:andStandardInput:]', symObjAddr: 0xF0, symBinAddr: 0x100003B60, symSize: 0xB0 }
+  - { offsetInCU: 0x13C, offset: 0xC7BF2, size: 0x8, addend: 0x0, symName: '-[ToProResJob arguments]', symObjAddr: 0x1A0, symBinAddr: 0x100003C10, symSize: 0x20 }
+  - { offsetInCU: 0x175, offset: 0xC7C2B, size: 0x8, addend: 0x0, symName: '-[ToProResJob setArguments:]', symObjAddr: 0x1C0, symBinAddr: 0x100003C30, symSize: 0x30 }
+  - { offsetInCU: 0x1B7, offset: 0xC7C6D, size: 0x8, addend: 0x0, symName: '-[ToProResJob standardInputString]', symObjAddr: 0x1F0, symBinAddr: 0x100003C60, symSize: 0x20 }
+  - { offsetInCU: 0x1F0, offset: 0xC7CA6, size: 0x8, addend: 0x0, symName: '-[ToProResJob setStandardInputString:]', symObjAddr: 0x210, symBinAddr: 0x100003C80, symSize: 0x30 }
+  - { offsetInCU: 0x232, offset: 0xC7CE8, size: 0x8, addend: 0x0, symName: '-[ToProResJob .cxx_destruct]', symObjAddr: 0x240, symBinAddr: 0x100003CB0, symSize: 0x3C }
+  - { offsetInCU: 0x91, offset: 0xC7DE3, size: 0x8, addend: 0x0, symName: '+[DockCircularProgressBar sharedDockCircularProgressBar]', symObjAddr: 0x1B30, symBinAddr: 0x100005820, symSize: 0x1B0 }
+  - { offsetInCU: 0xBB, offset: 0xC7E0D, size: 0x8, addend: 0x0, symName: '__ZZ56+[DockCircularProgressBar sharedDockCircularProgressBar]E12progress_bar', symObjAddr: 0xFB80, symBinAddr: 0x100013648, symSize: 0x0 }
+  - { offsetInCU: 0x3A66, offset: 0xCB7B8, size: 0x8, addend: 0x0, symName: '-[DockTileView drawRect:]', symObjAddr: 0x0, symBinAddr: 0x100003CF0, symSize: 0x1990 }
+  - { offsetInCU: 0x3DD2, offset: 0xCBB24, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateC1Ev, symObjAddr: 0x1990, symBinAddr: 0x100005680, symSize: 0x20 }
+  - { offsetInCU: 0x3DFC, offset: 0xCBB4E, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateD1Ev, symObjAddr: 0x19B0, symBinAddr: 0x1000056A0, symSize: 0x20 }
+  - { offsetInCU: 0x3E26, offset: 0xCBB78, size: 0x8, addend: 0x0, symName: '-[DockTileView indeterminate]', symObjAddr: 0x19E0, symBinAddr: 0x1000056D0, symSize: 0x20 }
+  - { offsetInCU: 0x3E5F, offset: 0xCBBB1, size: 0x8, addend: 0x0, symName: '-[DockTileView setIndeterminate:]', symObjAddr: 0x1A00, symBinAddr: 0x1000056F0, symSize: 0x30 }
+  - { offsetInCU: 0x3EA1, offset: 0xCBBF3, size: 0x8, addend: 0x0, symName: '-[DockTileView progress]', symObjAddr: 0x1A30, symBinAddr: 0x100005720, symSize: 0x30 }
+  - { offsetInCU: 0x3EDA, offset: 0xCBC2C, size: 0x8, addend: 0x0, symName: '-[DockTileView setProgress:]', symObjAddr: 0x1A60, symBinAddr: 0x100005750, symSize: 0x30 }
+  - { offsetInCU: 0x3F1C, offset: 0xCBC6E, size: 0x8, addend: 0x0, symName: '-[DockTileView hideProgressBar]', symObjAddr: 0x1A90, symBinAddr: 0x100005780, symSize: 0x20 }
+  - { offsetInCU: 0x3F55, offset: 0xCBCA7, size: 0x8, addend: 0x0, symName: '-[DockTileView setHideProgressBar:]', symObjAddr: 0x1AB0, symBinAddr: 0x1000057A0, symSize: 0x30 }
+  - { offsetInCU: 0x3F97, offset: 0xCBCE9, size: 0x8, addend: 0x0, symName: '-[DockTileView showPercent]', symObjAddr: 0x1AE0, symBinAddr: 0x1000057D0, symSize: 0x20 }
+  - { offsetInCU: 0x3FD0, offset: 0xCBD22, size: 0x8, addend: 0x0, symName: '-[DockTileView setShowPercent:]', symObjAddr: 0x1B00, symBinAddr: 0x1000057F0, symSize: 0x30 }
+  - { offsetInCU: 0x4012, offset: 0xCBD64, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar updateProgressBar]', symObjAddr: 0x1CE0, symBinAddr: 0x1000059D0, symSize: 0x1A0 }
+  - { offsetInCU: 0x4065, offset: 0xCBDB7, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar hideProgressBar]', symObjAddr: 0x1E80, symBinAddr: 0x100005B70, symSize: 0x1A0 }
+  - { offsetInCU: 0x40B8, offset: 0xCBE0A, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar setIndeterminate:]', symObjAddr: 0x2020, symBinAddr: 0x100005D10, symSize: 0x180 }
+  - { offsetInCU: 0x411A, offset: 0xCBE6C, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar setProgress:]', symObjAddr: 0x21A0, symBinAddr: 0x100005E90, symSize: 0x140 }
+  - { offsetInCU: 0x417C, offset: 0xCBECE, size: 0x8, addend: 0x0, symName: '-[DockCircularProgressBar clear]', symObjAddr: 0x22E0, symBinAddr: 0x100005FD0, symSize: 0x90 }
+  - { offsetInCU: 0x41B1, offset: 0xCBF03, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateC2Ev, symObjAddr: 0x2370, symBinAddr: 0x100006060, symSize: 0x30 }
+  - { offsetInCU: 0x41DB, offset: 0xCBF2D, size: 0x8, addend: 0x0, symName: __ZN12_GLOBAL__N_133ScopedNSGraphicsContextSaveGStateD2Ev, symObjAddr: 0x23A0, symBinAddr: 0x100006090, symSize: 0x26 }
+  - { offsetInCU: 0x27, offset: 0xCC4A9, size: 0x8, addend: 0x0, symName: '-[ProgressBarView viewDidMoveToWindow]', symObjAddr: 0x0, symBinAddr: 0x1000060C0, symSize: 0x20 }
+  - { offsetInCU: 0x89, offset: 0xCC50B, size: 0x8, addend: 0x0, symName: '-[ProgressBarView viewDidMoveToWindow]', symObjAddr: 0x0, symBinAddr: 0x1000060C0, symSize: 0x20 }
+  - { offsetInCU: 0x141, offset: 0xCC5C3, size: 0x8, addend: 0x0, symName: '-[ProgressBarView drawRect:]', symObjAddr: 0x20, symBinAddr: 0x1000060E0, symSize: 0x970 }
+  - { offsetInCU: 0x30D, offset: 0xCC78F, size: 0x8, addend: 0x0, symName: '-[ProgressBarView isFlipped]', symObjAddr: 0x990, symBinAddr: 0x100006A50, symSize: 0x20 }
+  - { offsetInCU: 0x346, offset: 0xCC7C8, size: 0x8, addend: 0x0, symName: '-[ProgressBarView .cxx_destruct]', symObjAddr: 0x9B0, symBinAddr: 0x100006A70, symSize: 0x42 }
+  - { offsetInCU: 0x27, offset: 0xCC857, size: 0x8, addend: 0x0, symName: '-[Controller init]', symObjAddr: 0x0, symBinAddr: 0x100006AC0, symSize: 0x100 }
+  - { offsetInCU: 0x506, offset: 0xCCD36, size: 0x8, addend: 0x0, symName: '-[Controller init]', symObjAddr: 0x0, symBinAddr: 0x100006AC0, symSize: 0x100 }
+  - { offsetInCU: 0x53F, offset: 0xCCD6F, size: 0x8, addend: 0x0, symName: '-[Controller awakeFromNib]', symObjAddr: 0x100, symBinAddr: 0x100006BC0, symSize: 0x1A0 }
+  - { offsetInCU: 0x5A1, offset: 0xCCDD1, size: 0x8, addend: 0x0, symName: '-[Controller loadAppSettings]', symObjAddr: 0x2A0, symBinAddr: 0x100006D60, symSize: 0x350 }
+  - { offsetInCU: 0x603, offset: 0xCCE33, size: 0x8, addend: 0x0, symName: '-[Controller pathForDatafolderDefault1]', symObjAddr: 0x5F0, symBinAddr: 0x1000070B0, symSize: 0x190 }
+  - { offsetInCU: 0x669, offset: 0xCCE99, size: 0x8, addend: 0x0, symName: '-[Controller pathForDatafolder2]', symObjAddr: 0x780, symBinAddr: 0x100007240, symSize: 0x120 }
+  - { offsetInCU: 0x6CF, offset: 0xCCEFF, size: 0x8, addend: 0x0, symName: '-[Controller applicationDidFinishLaunching:]', symObjAddr: 0x8A0, symBinAddr: 0x100007360, symSize: 0xA10 }
+  - { offsetInCU: 0x7DC, offset: 0xCD00C, size: 0x8, addend: 0x0, symName: '-[Controller savePlist:]', symObjAddr: 0x12B0, symBinAddr: 0x100007D70, symSize: 0x440 }
+  - { offsetInCU: 0x8B5, offset: 0xCD0E5, size: 0x8, addend: 0x0, symName: '___24-[Controller savePlist:]_block_invoke', symObjAddr: 0x16F0, symBinAddr: 0x1000081B0, symSize: 0xF0 }
+  - { offsetInCU: 0x92D, offset: 0xCD15D, size: 0x8, addend: 0x0, symName: '___24-[Controller savePlist:]_block_invoke_2', symObjAddr: 0x17E0, symBinAddr: 0x1000082A0, symSize: 0x60 }
+  - { offsetInCU: 0x970, offset: 0xCD1A0, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0x1840, symBinAddr: 0x100008300, symSize: 0x40 }
+  - { offsetInCU: 0x997, offset: 0xCD1C7, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0x1880, symBinAddr: 0x100008340, symSize: 0x30 }
+  - { offsetInCU: 0x9B5, offset: 0xCD1E5, size: 0x8, addend: 0x0, symName: '-[Controller FolderPicker2:]', symObjAddr: 0x18B0, symBinAddr: 0x100008370, symSize: 0x3C0 }
+  - { offsetInCU: 0xA7A, offset: 0xCD2AA, size: 0x8, addend: 0x0, symName: '-[Controller userNotificationCenter:shouldPresentNotification:]', symObjAddr: 0x1C70, symBinAddr: 0x100008730, symSize: 0x80 }
+  - { offsetInCU: 0xAD4, offset: 0xCD304, size: 0x8, addend: 0x0, symName: '-[Controller application:openFiles:]', symObjAddr: 0x1CF0, symBinAddr: 0x1000087B0, symSize: 0x3B0 }
+  - { offsetInCU: 0xB5F, offset: 0xCD38F, size: 0x8, addend: 0x0, symName: '-[Controller applicationShouldTerminate:]', symObjAddr: 0x20A0, symBinAddr: 0x100008B60, symSize: 0xB0 }
+  - { offsetInCU: 0xBA9, offset: 0xCD3D9, size: 0x8, addend: 0x0, symName: '-[Controller initialiseInterface]', symObjAddr: 0x2150, symBinAddr: 0x100008C10, symSize: 0x1C0 }
+  - { offsetInCU: 0xBDF, offset: 0xCD40F, size: 0x8, addend: 0x0, symName: '-[Controller prepareInterfaceForExecution]', symObjAddr: 0x2310, symBinAddr: 0x100008DD0, symSize: 0x100 }
+  - { offsetInCU: 0xC15, offset: 0xCD445, size: 0x8, addend: 0x0, symName: '-[Controller cleanupInterface]', symObjAddr: 0x2410, symBinAddr: 0x100008ED0, symSize: 0x70 }
+  - { offsetInCU: 0xC4B, offset: 0xCD47B, size: 0x8, addend: 0x0, symName: '-[Controller prepareForExecution]', symObjAddr: 0x2480, symBinAddr: 0x100008F40, symSize: 0x2C0 }
+  - { offsetInCU: 0xCA0, offset: 0xCD4D0, size: 0x8, addend: 0x0, symName: '-[Controller executeScript]', symObjAddr: 0x2740, symBinAddr: 0x100009200, symSize: 0x80 }
+  - { offsetInCU: 0xCD6, offset: 0xCD506, size: 0x8, addend: 0x0, symName: '-[Controller executeScriptWithoutPrivileges]', symObjAddr: 0x27C0, symBinAddr: 0x100009280, symSize: 0x3A0 }
+  - { offsetInCU: 0xD0C, offset: 0xCD53C, size: 0x8, addend: 0x0, symName: '-[Controller taskFinished:]', symObjAddr: 0x2B60, symBinAddr: 0x100009620, symSize: 0xB0 }
+  - { offsetInCU: 0xD52, offset: 0xCD582, size: 0x8, addend: 0x0, symName: '-[Controller cleanup]', symObjAddr: 0x2C10, symBinAddr: 0x1000096D0, symSize: 0x150 }
+  - { offsetInCU: 0xDA7, offset: 0xCD5D7, size: 0x8, addend: 0x0, symName: '-[Controller gotOutputData:]', symObjAddr: 0x2D60, symBinAddr: 0x100009820, symSize: 0x1A0 }
+  - { offsetInCU: 0xDFD, offset: 0xCD62D, size: 0x8, addend: 0x0, symName: '-[Controller parseOutput:]', symObjAddr: 0x2F00, symBinAddr: 0x1000099C0, symSize: 0x10B0 }
+  - { offsetInCU: 0xFF9, offset: 0xCD829, size: 0x8, addend: 0x0, symName: '-[Controller openFiles:]', symObjAddr: 0x3FB0, symBinAddr: 0x10000AA70, symSize: 0x3F0 }
+  - { offsetInCU: 0x1094, offset: 0xCD8C4, size: 0x8, addend: 0x0, symName: '-[Controller validateMenuItem:]', symObjAddr: 0x43A0, symBinAddr: 0x10000AE60, symSize: 0x130 }
+  - { offsetInCU: 0x10EE, offset: 0xCD91E, size: 0x8, addend: 0x0, symName: '-[Controller cancel:]', symObjAddr: 0x44D0, symBinAddr: 0x10000AF90, symSize: 0x160 }
+  - { offsetInCU: 0x1134, offset: 0xCD964, size: 0x8, addend: 0x0, symName: '-[Controller dropService:userData:error:]', symObjAddr: 0x4630, symBinAddr: 0x10000B0F0, symSize: 0x1E0 }
+  - { offsetInCU: 0x11CA, offset: 0xCD9FA, size: 0x8, addend: 0x0, symName: '-[Controller addDroppedFilesJob:]', symObjAddr: 0x4810, symBinAddr: 0x10000B2D0, symSize: 0x530 }
+  - { offsetInCU: 0x1279, offset: 0xCDAA9, size: 0x8, addend: 0x0, symName: '-[Controller addMenuItemSelectedJob:]', symObjAddr: 0x4D40, symBinAddr: 0x10000B800, symSize: 0x110 }
+  - { offsetInCU: 0x12D3, offset: 0xCDB03, size: 0x8, addend: 0x0, symName: '-[Controller isAcceptableFileType:]', symObjAddr: 0x4E50, symBinAddr: 0x10000B910, symSize: 0x100 }
+  - { offsetInCU: 0x133D, offset: 0xCDB6D, size: 0x8, addend: 0x0, symName: '-[Controller draggingEntered:]', symObjAddr: 0x4F50, symBinAddr: 0x10000BA10, symSize: 0x4E0 }
+  - { offsetInCU: 0x13EC, offset: 0xCDC1C, size: 0x8, addend: 0x0, symName: '-[Controller prepareForDragOperation:]', symObjAddr: 0x5430, symBinAddr: 0x10000BEF0, symSize: 0x50 }
+  - { offsetInCU: 0x1436, offset: 0xCDC66, size: 0x8, addend: 0x0, symName: '-[Controller performDragOperation:]', symObjAddr: 0x5480, symBinAddr: 0x10000BF40, symSize: 0x130 }
+  - { offsetInCU: 0x1490, offset: 0xCDCC0, size: 0x8, addend: 0x0, symName: '-[Controller concludeDragOperation:]', symObjAddr: 0x55B0, symBinAddr: 0x10000C070, symSize: 0xB0 }
+  - { offsetInCU: 0x14D6, offset: 0xCDD06, size: 0x8, addend: 0x0, symName: '-[Controller draggingUpdated:]', symObjAddr: 0x5660, symBinAddr: 0x10000C120, symSize: 0x60 }
+  - { offsetInCU: 0x1520, offset: 0xCDD50, size: 0x8, addend: 0x0, symName: '-[Controller menuItemSelected:]', symObjAddr: 0x56C0, symBinAddr: 0x10000C180, symSize: 0xF0 }
+  - { offsetInCU: 0x1566, offset: 0xCDD96, size: 0x8, addend: 0x0, symName: '-[Controller showNotification:]', symObjAddr: 0x57B0, symBinAddr: 0x10000C270, symSize: 0xE0 }
+  - { offsetInCU: 0x15BC, offset: 0xCDDEC, size: 0x8, addend: 0x0, symName: '-[Controller buttonDonations:]', symObjAddr: 0x5890, symBinAddr: 0x10000C350, symSize: 0xB0 }
+  - { offsetInCU: 0x1602, offset: 0xCDE32, size: 0x8, addend: 0x0, symName: '-[Controller applicationShouldTerminateAfterLastWindowClosed:]', symObjAddr: 0x5940, symBinAddr: 0x10000C400, symSize: 0x50 }
+  - { offsetInCU: 0x164C, offset: 0xCDE7C, size: 0x8, addend: 0x0, symName: '-[Controller percentField]', symObjAddr: 0x5990, symBinAddr: 0x10000C450, symSize: 0x30 }
+  - { offsetInCU: 0x1685, offset: 0xCDEB5, size: 0x8, addend: 0x0, symName: '-[Controller setPercentField:]', symObjAddr: 0x59C0, symBinAddr: 0x10000C480, symSize: 0x30 }
+  - { offsetInCU: 0x16C7, offset: 0xCDEF7, size: 0x8, addend: 0x0, symName: '-[Controller percentSlider]', symObjAddr: 0x59F0, symBinAddr: 0x10000C4B0, symSize: 0x30 }
+  - { offsetInCU: 0x1700, offset: 0xCDF30, size: 0x8, addend: 0x0, symName: '-[Controller setPercentSlider:]', symObjAddr: 0x5A20, symBinAddr: 0x10000C4E0, symSize: 0x30 }
+  - { offsetInCU: 0x1742, offset: 0xCDF72, size: 0x8, addend: 0x0, symName: '-[Controller testArray1]', symObjAddr: 0x5A50, symBinAddr: 0x10000C510, symSize: 0x30 }
+  - { offsetInCU: 0x177B, offset: 0xCDFAB, size: 0x8, addend: 0x0, symName: '-[Controller setTestArray1:]', symObjAddr: 0x5A80, symBinAddr: 0x10000C540, symSize: 0x30 }
+  - { offsetInCU: 0x17BD, offset: 0xCDFED, size: 0x8, addend: 0x0, symName: '-[Controller currentlySelectedPort1]', symObjAddr: 0x5AB0, symBinAddr: 0x10000C570, symSize: 0x20 }
+  - { offsetInCU: 0x17F6, offset: 0xCE026, size: 0x8, addend: 0x0, symName: '-[Controller setCurrentlySelectedPort1:]', symObjAddr: 0x5AD0, symBinAddr: 0x10000C590, symSize: 0x30 }
+  - { offsetInCU: 0x1838, offset: 0xCE068, size: 0x8, addend: 0x0, symName: '-[Controller plistFileName]', symObjAddr: 0x5B00, symBinAddr: 0x10000C5C0, symSize: 0x30 }
+  - { offsetInCU: 0x1871, offset: 0xCE0A1, size: 0x8, addend: 0x0, symName: '-[Controller setPlistFileName:]', symObjAddr: 0x5B30, symBinAddr: 0x10000C5F0, symSize: 0x30 }
+  - { offsetInCU: 0x18B3, offset: 0xCE0E3, size: 0x8, addend: 0x0, symName: '-[Controller Folder2]', symObjAddr: 0x5B60, symBinAddr: 0x10000C620, symSize: 0x30 }
+  - { offsetInCU: 0x18EC, offset: 0xCE11C, size: 0x8, addend: 0x0, symName: '-[Controller setFolder2:]', symObjAddr: 0x5B90, symBinAddr: 0x10000C650, symSize: 0x30 }
+  - { offsetInCU: 0x192E, offset: 0xCE15E, size: 0x8, addend: 0x0, symName: '-[Controller ProgressString]', symObjAddr: 0x5BC0, symBinAddr: 0x10000C680, symSize: 0x30 }
+  - { offsetInCU: 0x1967, offset: 0xCE197, size: 0x8, addend: 0x0, symName: '-[Controller setProgressString:]', symObjAddr: 0x5BF0, symBinAddr: 0x10000C6B0, symSize: 0x30 }
+  - { offsetInCU: 0x19A9, offset: 0xCE1D9, size: 0x8, addend: 0x0, symName: '-[Controller ProgressStringOld]', symObjAddr: 0x5C20, symBinAddr: 0x10000C6E0, symSize: 0x30 }
+  - { offsetInCU: 0x19E2, offset: 0xCE212, size: 0x8, addend: 0x0, symName: '-[Controller setProgressStringOld:]', symObjAddr: 0x5C50, symBinAddr: 0x10000C710, symSize: 0x30 }
+  - { offsetInCU: 0x1A24, offset: 0xCE254, size: 0x8, addend: 0x0, symName: '-[Controller .cxx_destruct]', symObjAddr: 0x5C80, symBinAddr: 0x10000C740, symSize: 0x329 }
+  - { offsetInCU: 0x27, offset: 0xCE488, size: 0x8, addend: 0x0, symName: _exceptionHandler, symObjAddr: 0x0, symBinAddr: 0x10000CA70, symSize: 0x110 }
+  - { offsetInCU: 0x4F, offset: 0xCE4B0, size: 0x8, addend: 0x0, symName: _root_port, symObjAddr: 0x18AC, symBinAddr: 0x10001365C, symSize: 0x0 }
+  - { offsetInCU: 0x6C, offset: 0xCE4CD, size: 0x8, addend: 0x0, symName: _notify, symObjAddr: 0x18A0, symBinAddr: 0x100013650, symSize: 0x0 }
+  - { offsetInCU: 0x82, offset: 0xCE4E3, size: 0x8, addend: 0x0, symName: _anIterator, symObjAddr: 0x18A8, symBinAddr: 0x100013658, symSize: 0x0 }
+  - { offsetInCU: 0xA8, offset: 0xCE509, size: 0x8, addend: 0x0, symName: _exceptionHandler, symObjAddr: 0x0, symBinAddr: 0x10000CA70, symSize: 0x110 }
+  - { offsetInCU: 0xCE, offset: 0xCE52F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x110, symBinAddr: 0x10000CB80, symSize: 0xE0 }
+  - { offsetInCU: 0x107, offset: 0xCE568, size: 0x8, addend: 0x0, symName: _callback, symObjAddr: 0x1F0, symBinAddr: 0x10000CC60, symSize: 0xBD }
 ...

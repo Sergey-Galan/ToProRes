@@ -12,13 +12,15 @@
 		A50F9EAB26BC55E200369BCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F9EA726BC55E200369BCA /* main.m */; };
 		A52500CF2A05326500F210CB /* DockCircularProgressBar.mm in Sources */ = {isa = PBXBuildFile; fileRef = A52500CD2A05271E00F210CB /* DockCircularProgressBar.mm */; };
 		A54341CC29FFE57A0050DD30 /* ProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54341CA29FFE57A0050DD30 /* ProgressBarView.m */; };
-		A54DB86229C3D56600B544FA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C0ED01269DF03F00A115FF /* Security.framework */; };
 		A57F3EC62A07A138009B8D79 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC02A07A138009B8D79 /* scripts */; };
 		A57F3EC72A07A138009B8D79 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC12A07A138009B8D79 /* appIcon.icns */; };
 		A57F3EC82A07A138009B8D79 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC22A07A138009B8D79 /* Credits.html */; };
 		A57F3EC92A07A138009B8D79 /* tools in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC32A07A138009B8D79 /* tools */; };
 		A57F3ECA2A07A138009B8D79 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC42A07A138009B8D79 /* MainMenu.xib */; };
 		A57F3ECB2A07A138009B8D79 /* sound in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC52A07A138009B8D79 /* sound */; };
+		A5DEA30F2B20A04B0057D893 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DEA30E2B20A04B0057D893 /* Cocoa.framework */; };
+		A5DEA3102B20A05B0057D893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42A93D52178365C00C40D46 /* Foundation.framework */; };
+		A5DEA3112B20A0690057D893 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D8198326B76656008F9D42 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,11 +38,10 @@
 		A57F3EC32A07A138009B8D79 /* tools */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = tools; path = ToProRes/Resources/tools; sourceTree = SOURCE_ROOT; };
 		A57F3EC42A07A138009B8D79 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ToProRes/Resources/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		A57F3EC52A07A138009B8D79 /* sound */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sound; path = ToProRes/Resources/sound; sourceTree = SOURCE_ROOT; };
-		A5C0ED01269DF03F00A115FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = ../../../../System/Library/Frameworks/Security.framework; sourceTree = "<group>"; };
 		A5D8198326B76656008F9D42 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A5D87B3C26BC67B0001AA183 /* ToProResJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToProResJob.h; path = ToProRes/ToProResJob.h; sourceTree = "<group>"; };
+		A5DEA30E2B20A04B0057D893 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F42A93D52178365C00C40D46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F42A93D62178365C00C40D46 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F48B774111F7661C00351575 /* ToProRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToProRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,7 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A54DB86229C3D56600B544FA /* Security.framework in Frameworks */,
+				A5DEA30F2B20A04B0057D893 /* Cocoa.framework in Frameworks */,
+				A5DEA3102B20A05B0057D893 /* Foundation.framework in Frameworks */,
+				A5DEA3112B20A0690057D893 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,10 +89,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5DEA30E2B20A04B0057D893 /* Cocoa.framework */,
 				A5D8198326B76656008F9D42 /* IOKit.framework */,
-				F42A93D62178365C00C40D46 /* AppKit.framework */,
 				F42A93D52178365C00C40D46 /* Foundation.framework */,
-				A5C0ED01269DF03F00A115FF /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Sergey Galan";
 				TargetAttributes = {
 					F48B774011F7661C00351575 = {
@@ -244,6 +246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
@@ -316,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
@@ -390,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_LINK_OBJC_RUNTIME = YES;
@@ -470,7 +475,6 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
@@ -518,7 +522,6 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
@@ -563,7 +566,6 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
