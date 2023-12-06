@@ -45,7 +45,7 @@
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="438" height="305"/>
             <value key="maxSize" type="size" width="438" height="305"/>
-            <view key="contentView" focusRingType="none" id="e8s-U8-pTE">
+            <view key="contentView" wantsLayer="YES" focusRingType="none" id="e8s-U8-pTE">
                 <rect key="frame" x="0.0" y="0.0" width="438" height="305"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
@@ -59,7 +59,7 @@
                                 <textField verticalHuggingPriority="750" id="Mbs-ef-aeU" userLabel="count">
                                     <rect key="frame" x="175" y="24" width="44" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" id="9Cj-BN-ssp">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="9Cj-BN-ssp">
                                         <font key="font" metaFont="miniSystem"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -123,10 +123,9 @@
                                     <rect key="frame" x="177" y="43" width="40" height="12"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <contentFilters>
-                                        <ciFilter name="CIFalseColor">
+                                        <ciFilter name="CIHueAdjust">
                                             <configuration>
-                                                <ciColor key="inputColor0" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1"/>
-                                                <ciColor key="inputColor1" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1"/>
+                                                <real key="inputAngle" value="21"/>
                                                 <null key="inputImage"/>
                                             </configuration>
                                         </ciFilter>
@@ -217,7 +216,7 @@ AAAAAAEGA
                             <action selector="cancel:" target="207" id="BiK-uF-yNy"/>
                         </connections>
                     </button>
-                    <button toolTip="Output Folder" imageHugsTitle="YES" verticalHuggingPriority="750" id="E82-YX-Hfo" userLabel="FolderPicker">
+                    <button toolTip="Output Folder" imageHugsTitle="YES" id="E82-YX-Hfo" userLabel="FolderPicker">
                         <rect key="frame" x="14" y="12" width="26" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="NSTouchBarFolderMoveToTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="PRL-KH-d3K">

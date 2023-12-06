@@ -100,6 +100,7 @@
 @property (retain) NSString *plistFileName;
 @property (retain) NSString *Folder2;
 @property (retain) NSString *ProgressString;
+@property (retain) NSString *ProgressStringOld;
 @end
 
 
@@ -316,12 +317,10 @@
         
 
 - (IBAction)FolderPicker2:(id)sender{
-    NSString *path = NSTemporaryDirectory();
-    NSArray *directoryContents = [NSFileManager.defaultManager subpathsOfDirectoryAtPath:path error:nil];
     NSOpenPanel *openPanel = [NSOpenPanel openPanel];
-    [openPanel setTitle:@"Choose a Folder"];
-    [openPanel setAllowedFileTypes:directoryContents];
     [openPanel setCanChooseDirectories:YES];
+    [openPanel setCanCreateDirectories:YES];
+    [openPanel setCanChooseFiles:NO];
     if ([openPanel runModal] == NSModalResponseOK){
         NSString *FolderPath = [[openPanel URLs][0] path];
         [FoldernameLabel2 setStringValue:FolderPath];
@@ -738,34 +737,32 @@
             }
             [MessageTextFieldProgress setStringValue:ProgressString];
             self.ProgressString = ProgressString;
-            Float64 Percent = [ProgressString floatValue];
             if (![ProgressString  isEqual: @""]) {
-                double progress = [ProgressString intValue]/100.0;
-                // Make sure the previous ProgressBar is clear before update.
-                [[DockCircularProgressBar sharedDockCircularProgressBar]
-                 setProgress:(float)progress];
-                [[DockCircularProgressBar sharedDockCircularProgressBar] updateProgressBar];
-                pb_progress_view->text=@"";
-                pb_progress_view->progress=(int)Percent;
-                [pb_progress_view setNeedsDisplay:true];
+                if (![_ProgressString isEqual: _ProgressStringOld]) {
+                    Float64 Percent = [ProgressString floatValue];
+                    double progress = [ProgressString intValue]/100.0;
+                    // Make sure the previous ProgressBar is clear before update.
+                    [[DockCircularProgressBar sharedDockCircularProgressBar]
+                     setProgress:(float)progress];
+                    [[DockCircularProgressBar sharedDockCircularProgressBar] updateProgressBar];
+                    pb_progress_view->text=@"";
+                    pb_progress_view->progress=(int)Percent;
+                    [pb_progress_view setNeedsDisplay:true];
+                } else {
+                    NSLog(@"Skip Progress");
+                }
+                _ProgressStringOld = _ProgressString;
             } else {
                 [[DockCircularProgressBar sharedDockCircularProgressBar] hideProgressBar];
                 pb_progress_view->text=@"Drag video files";
                 pb_progress_view->progress=0;
                 [pb_progress_view setNeedsDisplay:true];
-                continue;
             }
+            continue;
         }
     }
 }
 
-- (void)clearOutputBuffer {
-    NSTextStorage *textStorage = [outputTextView textStorage];
-    NSRange range = NSMakeRange(0, [textStorage length]-1);
-    [textStorage beginEditing];
-    [textStorage replaceCharactersInRange:range withString:@""];
-    [textStorage endEditing];
-}
 
 #pragma mark - Interface actions
 
