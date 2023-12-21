@@ -5,7 +5,7 @@ The simple program on ffmpeg engine for video compression in the ProRes format. 
 Compatible with Mac OS X 10.13 and up
 
 
-![1](https://github.com/Sergey-Galan/ToProRes/assets/30828202/6819c7db-1729-427b-bde6-a9a86bde4872)  ![2](https://github.com/Sergey-Galan/ToProRes/assets/30828202/b04aa29d-a492-4d2d-b96d-7838ef8275ba)
+ ![2](https://github.com/Sergey-Galan/ToProRes/assets/30828202/b04aa29d-a492-4d2d-b96d-7838ef8275ba) ![1](https://github.com/Sergey-Galan/ToProRes/assets/30828202/6819c7db-1729-427b-bde6-a9a86bde4872) 
 
 
 
