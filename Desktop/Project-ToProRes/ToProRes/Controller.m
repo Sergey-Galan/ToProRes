@@ -413,7 +413,6 @@
 
 // Prepare all the controls, windows, etc prior to executing script
 - (void)prepareInterfaceForExecution {
-    [outputTextView setString:@""];
     // Yes, yes, this is a nasty hack. But styling in NSTextViews
     // doesn't get applied when appending text unless there is already
     // some text in the view. The alternative is to make very expensive
@@ -421,6 +420,7 @@
     // which freezes up the app when lots of text is dumped by the script
     [outputTextView setString:@"\u200B"]; // zero-width space character
     pb_progress_view->text=@"";
+    [outputTextView setString:@""];
     [CancelButton setTitle:@"Cancel"];
     [FolderPicker2 setEnabled:NO];
     [[DockCircularProgressBar sharedDockCircularProgressBar] clear];
@@ -428,7 +428,6 @@
 
 // Adjust controls, windows, etc. once script is done executing
 - (void)cleanupInterface {
-    
     [CancelButton setTitle:@"Quit"];
     [CancelButton setEnabled:YES];
     [FolderPicker2 setEnabled:YES];

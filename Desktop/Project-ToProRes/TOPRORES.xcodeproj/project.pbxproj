@@ -12,6 +12,7 @@
 		A50F9EAB26BC55E200369BCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F9EA726BC55E200369BCA /* main.m */; };
 		A52500CF2A05326500F210CB /* DockCircularProgressBar.mm in Sources */ = {isa = PBXBuildFile; fileRef = A52500CD2A05271E00F210CB /* DockCircularProgressBar.mm */; };
 		A54341CC29FFE57A0050DD30 /* ProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54341CA29FFE57A0050DD30 /* ProgressBarView.m */; };
+		A55DFFA22C9B83BA00E6270B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A55DFFA12C9B83BA00E6270B /* LICENSE.txt */; };
 		A57F3EC62A07A138009B8D79 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC02A07A138009B8D79 /* scripts */; };
 		A57F3EC72A07A138009B8D79 /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC12A07A138009B8D79 /* appIcon.icns */; };
 		A57F3EC82A07A138009B8D79 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = A57F3EC22A07A138009B8D79 /* Credits.html */; };
@@ -21,6 +22,7 @@
 		A5DEA30F2B20A04B0057D893 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DEA30E2B20A04B0057D893 /* Cocoa.framework */; };
 		A5DEA3102B20A05B0057D893 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42A93D52178365C00C40D46 /* Foundation.framework */; };
 		A5DEA3112B20A0690057D893 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D8198326B76656008F9D42 /* IOKit.framework */; };
+		A5E9D2E32C9B7B9F00FD9D32 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E9D2E22C9B7B9F00FD9D32 /* Metal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,7 @@
 		A52500CD2A05271E00F210CB /* DockCircularProgressBar.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = DockCircularProgressBar.mm; path = ToProRes/DockCircularProgressBar.mm; sourceTree = "<group>"; usesTabs = 0; };
 		A54341CA29FFE57A0050DD30 /* ProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressBarView.m; path = ToProRes/ProgressBarView.m; sourceTree = "<group>"; };
 		A54341CB29FFE57A0050DD30 /* ProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressBarView.h; path = ToProRes/ProgressBarView.h; sourceTree = "<group>"; };
+		A55DFFA12C9B83BA00E6270B /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		A57F3EC02A07A138009B8D79 /* scripts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = scripts; path = ToProRes/Resources/scripts; sourceTree = SOURCE_ROOT; };
 		A57F3EC12A07A138009B8D79 /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = appIcon.icns; path = ToProRes/Resources/appIcon.icns; sourceTree = SOURCE_ROOT; };
 		A57F3EC22A07A138009B8D79 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = ToProRes/Resources/Credits.html; sourceTree = SOURCE_ROOT; };
@@ -41,6 +44,8 @@
 		A5D8198326B76656008F9D42 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A5D87B3C26BC67B0001AA183 /* ToProResJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToProResJob.h; path = ToProRes/ToProResJob.h; sourceTree = "<group>"; };
 		A5DEA30E2B20A04B0057D893 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A5E6FACC2C9B8E5900692943 /* ToProRes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ToProRes.entitlements; path = ToProRes/ToProRes.entitlements; sourceTree = "<group>"; };
+		A5E9D2E22C9B7B9F00FD9D32 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		F42A93D52178365C00C40D46 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F48B774111F7661C00351575 /* ToProRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToProRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -52,6 +57,7 @@
 			files = (
 				A5DEA30F2B20A04B0057D893 /* Cocoa.framework in Frameworks */,
 				A5DEA3102B20A05B0057D893 /* Foundation.framework in Frameworks */,
+				A5E9D2E32C9B7B9F00FD9D32 /* Metal.framework in Frameworks */,
 				A5DEA3112B20A0690057D893 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +84,7 @@
 		29B97314FDCFA39411CA2CEA /* ToProRes */ = {
 			isa = PBXGroup;
 			children = (
+				A55DFFA12C9B83BA00E6270B /* LICENSE.txt */,
 				F48B7B8811F766CA00351575 /* ToProRes */,
 				080E96DDFE201D6D7F000001 /* Shared */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -89,6 +96,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5E9D2E22C9B7B9F00FD9D32 /* Metal.framework */,
 				A5DEA30E2B20A04B0057D893 /* Cocoa.framework */,
 				A5D8198326B76656008F9D42 /* IOKit.framework */,
 				F42A93D52178365C00C40D46 /* Foundation.framework */,
@@ -124,6 +132,7 @@
 		F48B7B8811F766CA00351575 /* ToProRes */ = {
 			isa = PBXGroup;
 			children = (
+				A5E6FACC2C9B8E5900692943 /* ToProRes.entitlements */,
 				A50F9EA526BC55E200369BCA /* Controller.h */,
 				A50F9EA426BC55E200369BCA /* Controller.m */,
 				A50F9EA726BC55E200369BCA /* main.m */,
@@ -144,7 +153,6 @@
 				F48B773D11F7661C00351575 /* Resources */,
 				F48B773E11F7661C00351575 /* Sources */,
 				F48B773F11F7661C00351575 /* Frameworks */,
-				F4302B7B21C5A04A001C8BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -162,7 +170,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "Sergey Galan";
 				TargetAttributes = {
 					F48B774011F7661C00351575 = {
@@ -202,29 +210,11 @@
 				A57F3EC82A07A138009B8D79 /* Credits.html in Resources */,
 				A57F3EC92A07A138009B8D79 /* tools in Resources */,
 				A57F3EC72A07A138009B8D79 /* appIcon.icns in Resources */,
+				A55DFFA22C9B83BA00E6270B /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F4302B7B21C5A04A001C8BEC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F48B773E11F7661C00351575 /* Sources */ = {
@@ -271,6 +261,7 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -344,6 +335,7 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -420,6 +412,7 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -470,6 +463,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = ToProRes/ToProRes.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
@@ -479,7 +473,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = WSC9LR5SDP;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -517,6 +511,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = ToProRes/ToProRes.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
@@ -526,7 +521,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = WSC9LR5SDP;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -562,6 +557,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = ToProRes/ToProRes.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
@@ -570,7 +566,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = WSC9LR5SDP;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GCC_CW_ASM_SYNTAX = NO;
 				GCC_ENABLE_PASCAL_STRINGS = YES;

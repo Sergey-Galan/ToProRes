@@ -8,9 +8,13 @@
 		<data>
 		UrebuEW0+IKdpBRj0n6hjf8ZF00=
 		</data>
+		<key>Resources/LICENSE.txt</key>
+		<data>
+		2VTYEj5cfQtaPECWXLoAhbdBm10=
+		</data>
 		<key>Resources/MainMenu.nib/designable.nib</key>
 		<data>
-		4Om1wrzXlvZoJhgfILVqb/mTlbs=
+		CQ2bVq3dLZONQcK8istOKk9AYCY=
 		</data>
 		<key>Resources/MainMenu.nib/keyedobjects.nib</key>
 		<data>
@@ -46,11 +50,18 @@
 			1Nzr4LOqGeXr264aaQedyE2rvOTP1+8u6py140SRAcE=
 			</data>
 		</dict>
+		<key>Resources/LICENSE.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XieQw9NAZZaAkO3SdEZtBkoEo+c5XMcUH4xuFxFIrBU=
+			</data>
+		</dict>
 		<key>Resources/MainMenu.nib/designable.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HyiyFZGnd4uSpPUMdguG8Jqgi1X4D4Fsa3yDgjubfvE=
+			RugbuHJ34bd9Neulf60FCSF9DmTnTyEsVy8dlXL/taU=
 			</data>
 		</dict>
 		<key>Resources/MainMenu.nib/keyedobjects.nib</key>
