@@ -59,9 +59,7 @@
     NSFileHandle *outputReadFileHandle;
     
     NSMutableArray <NSString *> *arguments;
-    NSArray <NSString *> *commandLineArguments;
     NSArray <NSString *> *interpreterArgs;
-    NSArray <NSString *> *scriptArgs;
     NSString *stdinString;
     
     NSString *interpreterPath;
@@ -210,61 +208,6 @@
 #pragma mark - App Delegate handlers
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"/Preferences/org.SerhiiHalan.SettingsToProRes.plist"];
-    self.plistFileName = plistPath;
-    NSLog(@"plist file path: %@", plistPath);
-    
-    //Если плиста нет - создаётся дефолтный
-    NSData *plistTest = [NSData dataWithContentsOfFile:self.plistFileName];
-    if (!plistTest)
-    {
-        NSMutableDictionary *root = [NSMutableDictionary dictionary];
-        [root setObject:@"422" forKey:@"Profile"];
-        [root setObject:self.pathForDatafolderDefault1 forKey:@"DestinationFolder"];
-        NSLog(@"Default settings saving data:\n%@", root);
-        NSError *error = nil;
-        NSData *representation = [NSPropertyListSerialization dataWithPropertyList:root format:NSPropertyListBinaryFormat_v1_0 options:0 error:&error];
-        [representation writeToFile:self.plistFileName atomically:YES];
-        [self pathForDatafolderDefault1];
-    }
-    
-    //Get the keys from the plist
-    NSData *plistData = [NSData dataWithContentsOfFile:self.plistFileName];
-    if (!plistData)
-    {
-        NSLog(@"error reading from file: %@", self.plistFileName);
-    }
-    NSPropertyListFormat format;
-    NSError *error = nil;
-    id plist = [NSPropertyListSerialization propertyListWithData:plistData options:NSPropertyListMutableContainersAndLeaves format:&format error:&error];
-    if (!error)
-    {
-        NSMutableDictionary *root = plist;
-        NSLog(@"loaded data:\n%@", root);
-    }
-    else
-    {
-        NSLog(@"error: %@", error);
-    }
-    
-    _currentlySelectedPort1 = ((void)(@"%@"), [plist objectForKey:@"Profile"]);
-    [self.testArray1 addObject:@{ @"name" : @"422 Proxy" }];
-    [self.testArray1 addObject:@{ @"name" : @"422 LT" }];
-    [self.testArray1 addObject:@{ @"name" : @"422" }];
-    [self.testArray1 addObject:@{ @"name" : @"422 HQ" }];
-    [self.testArray1 addObject:@{ @"name" : @"4444" }];
-    [self.testArray1 addObject:@{ @"name" : @"4444 XQ" }];
-    
-    _Folder2 = ((void)(@"%@"), [plist objectForKey:@"DestinationFolder"]);
-    self.Folder2 = _Folder2;
-    
-    [self pathForDatafolder2];
-    
-    pb_progress_view->text=@"Drag video files";
-    [pb_progress_view setNeedsDisplay:true];
-    
     PLog(@"Application did finish launching");
     hasFinishedLaunching = YES;
 }
@@ -357,14 +300,6 @@
 - (void)application:(NSApplication *)theApplication openFiles:(NSArray *)filenames {
     PLog(@"Received openFiles event for files: %@", [filenames description]);
     
-    if (hasTaskRun == FALSE && commandLineArguments != nil) {
-        for (NSString *filePath in filenames) {
-            if ([commandLineArguments containsObject:filePath]) {
-                return;
-            }
-        }
-    }
-    
     // Add the dropped files as a job for processing
     BOOL success = [self addDroppedFilesJob:filenames];
     [NSApp replyToOpenOrPrint:success ? NSApplicationDelegateReplySuccess : NSApplicationDelegateReplyFailure];
@@ -390,6 +325,62 @@
 
 // Set up any menu items, windows, controls at application launch
 - (void)initialiseInterface {
+
+    // Insert code here to initialize your application
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"/Preferences/org.SerhiiHalan.SettingsToProRes.plist"];
+    self.plistFileName = plistPath;
+    NSLog(@"plist file path: %@", plistPath);
+    
+    //Если плиста нет - создаётся дефолтный
+    NSData *plistTest = [NSData dataWithContentsOfFile:self.plistFileName];
+    if (!plistTest)
+    {
+        NSMutableDictionary *root = [NSMutableDictionary dictionary];
+        [root setObject:@"422" forKey:@"Profile"];
+        [root setObject:self.pathForDatafolderDefault1 forKey:@"DestinationFolder"];
+        NSLog(@"Default settings saving data:\n%@", root);
+        NSError *error = nil;
+        NSData *representation = [NSPropertyListSerialization dataWithPropertyList:root format:NSPropertyListBinaryFormat_v1_0 options:0 error:&error];
+        [representation writeToFile:self.plistFileName atomically:YES];
+        [self pathForDatafolderDefault1];
+    }
+    
+    //Get the keys from the plist
+    NSData *plistData = [NSData dataWithContentsOfFile:self.plistFileName];
+    if (!plistData)
+    {
+        NSLog(@"error reading from file: %@", self.plistFileName);
+    }
+    NSPropertyListFormat format;
+    NSError *error = nil;
+    id plist = [NSPropertyListSerialization propertyListWithData:plistData options:NSPropertyListMutableContainersAndLeaves format:&format error:&error];
+    if (!error)
+    {
+        NSMutableDictionary *root = plist;
+        NSLog(@"loaded data:\n%@", root);
+    }
+    else
+    {
+        NSLog(@"error: %@", error);
+    }
+    
+    _currentlySelectedPort1 = ((void)(@"%@"), [plist objectForKey:@"Profile"]);
+    [self.testArray1 addObject:@{ @"name" : @"422 Proxy" }];
+    [self.testArray1 addObject:@{ @"name" : @"422 LT" }];
+    [self.testArray1 addObject:@{ @"name" : @"422" }];
+    [self.testArray1 addObject:@{ @"name" : @"422 HQ" }];
+    [self.testArray1 addObject:@{ @"name" : @"4444" }];
+    [self.testArray1 addObject:@{ @"name" : @"4444 XQ" }];
+    
+    _Folder2 = ((void)(@"%@"), [plist objectForKey:@"DestinationFolder"]);
+    self.Folder2 = _Folder2;
+    
+    [self pathForDatafolder2];
+    
+    pb_progress_view->text=@"Drag video files";
+    [pb_progress_view setNeedsDisplay:true];
+    
     [openRecentMenuItem setEnabled:acceptsFiles];
     if (!acceptsFiles) {
         [fileMenu removeItemAtIndex:0]; // Open
@@ -450,17 +441,6 @@
         NSLog(@"Script missing at execution path %@", scriptToProResPath);
     }
     [arguments addObject:scriptToProResPath];
-    
-    // Add arguments for script
-    [arguments addObjectsFromArray:scriptArgs];
-    
-    // If initial run of app, add any arguments passed in via the command line (argv)
-    // Q: Why CLI args for GUI app typically launched from Finder?
-    // A: Apparently helpful for certain use cases such as Firefox protocol handlers etc.
-    if (commandLineArguments && [commandLineArguments count]) {
-        [arguments addObjectsFromArray:commandLineArguments];
-        commandLineArguments = nil;
-    }
     
     // Finally, dequeue job and add arguments
     if ([jobQueue count] > 0) {
